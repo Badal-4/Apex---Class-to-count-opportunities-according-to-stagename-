@@ -1,0 +1,14 @@
+<apex:page controller="WorkClass">
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+        <apex:pageBlockTable value="{!result}" var="res">
+            <apex:column value="{!res['stagename']}">
+                <apex:facet name="header">Stage Name</apex:facet>
+            </apex:column>
+            <apex:column value="{!res['total']}">
+            	<apex:facet name="header">Count</apex:facet>
+            </apex:column>
+       	</apex:pageBlockTable>
+        </apex:pageBlockSection>    	
+    </apex:pageBlock>
+</apex:page>
