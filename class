@@ -1,0 +1,14 @@
+public class WorkClass 
+{
+   
+   /* public static void stagesize() 
+    {
+       List<AggregateResult>  result = [select stagename,count(Id) total from Opportunity group by stagename];
+        System.debug(result);
+    }*/
+    public List<AggregateResult> result {get;set;} 
+    public WorkClass() 
+    {
+       result = [select stagename,count(Id) total from Opportunity group by stagename];         
+    }
+}
